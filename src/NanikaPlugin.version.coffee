@@ -15,4 +15,4 @@ NanikaPlugin.version =
 					nanika.request 'name', null, (response_args) -> nanika.resource.name = response_args.value
 					nanika.request 'craftman', null, (response_args) -> nanika.resource.craftman = response_args.value
 					nanika.request 'craftmanw', null, (response_args) -> nanika.resource.craftmanw = response_args.value
-			nanika.emit 'version.set'
+				nanika.emit 'version.set'
