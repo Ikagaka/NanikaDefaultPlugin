@@ -1,0 +1,1 @@
+@NanikaPlugin = NanikaPlugin

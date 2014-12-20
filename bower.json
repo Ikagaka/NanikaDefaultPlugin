@@ -1,0 +1,16 @@
+{
+	"name": "NanikaDefaultPlugin",
+	"description": "NanikaDefaultPlugin - Nanika Default Plugin",
+	"dependencies": {
+		"ua-parser-js": "",
+		"useragent_parser_browser": ""
+	},
+	"main": "lib/NanikaDefaultPlugin.js",
+	"ignore": [
+		"**/.*",
+		"bower_components",
+		"node_modules",
+		"npm-debug.log",
+		"coverage"
+	]
+}
