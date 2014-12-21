@@ -6,4 +6,4 @@ NanikaPlugin.ssp =
 					id: id
 					headers: args
 			nanika.ssp.on 'script:halt', ->
-				nanika.halt()
+				nanika.halt 'ssp.script.halt'
