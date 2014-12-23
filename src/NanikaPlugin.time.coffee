@@ -12,9 +12,11 @@ NanikaPlugin.time =
 					cantalk: true # temporary
 			, 1000
 			nanika.on 'halt', -> clearInterval id_secondchange
+		nanika.on 'response.firstboot', init_secondchange
 		nanika.on 'response.boot', init_secondchange
 		nanika.on 'response.changed', init_secondchange
 		nanika.on 'response.called', init_secondchange
+		nanika.on 'response.vanished', init_secondchange
 		id_minutechange = null
 		init_minutechange = ->
 			if id_minutechange? then return
