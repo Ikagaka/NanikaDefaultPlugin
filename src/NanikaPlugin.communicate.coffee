@@ -9,4 +9,4 @@ NanikaPlugin.communicate =
 							index = result[1] - 1
 							if index
 								args[index] = value
-					nanika.nanikamanager.communicate nanika.ghost.descript.sakuraname, response_args.Reference0, response_args.value, args, response_args.Age, response_args.Surface
+					nanika.nanikamanager.communicate nanika.ghost.descript['sakura.name'], response_args.Reference0, response_args.value, args, response_args.Age, response_args.Surface
