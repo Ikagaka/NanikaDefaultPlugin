@@ -39,21 +39,20 @@ NanikaPlugin.notify_info =
 		ghostpathlist = -> # ghostpathlist
 		balloonpathlist = -> # balloonpathlist
 		installedghostname = ->
-			nanika.request 'installedghostname',
-				names: Object.keys(nanika.storage.ghosts).map (dirpath) -> nanika.storage.ghosts[dirpath].install.name
+			nanika.storage.ghost_names()
+			.then (names) ->
+				nanika.request 'installedghostname',
+					names: names
 		installedballoonname = ->
-			nanika.request 'installedballoonname',
-				names: Object.keys(nanika.storage.balloons).map (dirpath) -> nanika.storage.balloons[dirpath].install.name
+			nanika.storage.balloon_names()
+			.then (names) ->
+				nanika.request 'installedballoonname',
+					names: names
 		installedshellname = ->
-			shell = nanika.storage.ghost(nanika.ghostpath).getDirectory('shell')
-			shelldirs = shell.listChildren()
-			shellnames = []
-			for dir in shelldirs
-				name = shell.getDirectory(dir).descript?.name
-				if name?
-					shellnames.push name
-			nanika.request 'installedshellname',
-				names: shellnames
+			nanika.storage.shell_names(nanika.ghostpath)
+			.then (names) ->
+				nanika.request 'installedshellname',
+					names: names
 		rateofusegraph = -> # rateofusegraph
 		uniqueid = -> # uniqueid
 		nanika.on 'version.set', ownerghostname
