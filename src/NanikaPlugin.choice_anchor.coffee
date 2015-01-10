@@ -1,6 +1,6 @@
 NanikaPlugin.choice_anchor =
 	initialize: (nanika) ->
-		nanika.on 'materialized', ->
+		nanika.on 'named.initialized', ->
 			nanika.named.on 'choiceselect', (event) ->
 				if /^On/.test event.id # On
 					nanika.request 'any',

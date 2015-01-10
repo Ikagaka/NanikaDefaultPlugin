@@ -1,6 +1,6 @@
 NanikaPlugin.input =
 	initialize: (nanika) ->
-		nanika.on 'materialized', ->
+		nanika.on 'named.initialized', ->
 			nanika.named.on 'userinput', (event) ->
 				if event.content?
 					nanika.request 'userinput',

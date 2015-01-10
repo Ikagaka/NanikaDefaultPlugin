@@ -1,6 +1,6 @@
 NanikaPlugin.ssp =
 	initialize: (nanika) ->
-		nanika.on 'materialized', ->
+		nanika.on 'ssp.initialized', ->
 			nanika.ssp.on 'script:raise', ([id, args...]) ->
 				nanika.request 'any',
 					id: id

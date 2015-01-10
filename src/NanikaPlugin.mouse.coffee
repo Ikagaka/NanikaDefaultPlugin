@@ -1,6 +1,6 @@
 NanikaPlugin.mouse =
 	initialize: (nanika) ->
-		nanika.on 'materialized', ->
+		nanika.on 'named.initialized', ->
 			mouseevents = ['mousedown', 'mousemove', 'mouseup', 'mouseclick', 'mousedblclick']
 			for event_id in mouseevents
 				nanika.named.on event_id, ((event_id) ->

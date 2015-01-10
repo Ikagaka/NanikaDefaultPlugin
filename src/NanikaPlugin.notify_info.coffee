@@ -60,9 +60,9 @@ NanikaPlugin.notify_info =
 		nanika.on 'version.set', basewareversion
 		nanika.on 'version.set', notifyosinfo
 		nanika.on 'version.set', notifyfontinfo
-		nanika.on 'version.set', notifyselfinfo
-		nanika.on 'version.set', notifyballooninfo
-		nanika.on 'version.set', notifyshellinfo
+		nanika.on 'named.initialized', notifyselfinfo
+		nanika.on 'named.initialized', notifyballooninfo
+		nanika.on 'named.initialized', notifyshellinfo
 		nanika.on 'version.set', notifyuserinfo
 		nanika.on 'version.set', notifydressupinfo
 		nanika.on 'version.set', ghostpathlist
